@@ -1,0 +1,241 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --active-color: hsl(245, 83%, 68%);
+    --base-font: 'Red Hat Display', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Element Styles */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--base-font);
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+    line-height: 1;
+    min-height: 100vh;
+    background-color: var(--pale-blue);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 
+Typography Styles 
+*/
+h1 {
+    font-weight: 900;
+    font-size: 1.3em;
+    color: var(--dark-blue);
+}
+
+.component-title {
+    margin-bottom: 1em;
+}
+
+.component-text {
+    line-height: 1.3em;
+    font-weight: 500;
+    margin-bottom: 1em;
+    padding: 0 1em;
+}
+
+.pricing-title,
+.price {
+    font-size: 0.875em;
+}
+
+.pricing-title {
+    color: var(--dark-blue);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.pricing-link {
+    color: var(--bright-blue);
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 0.8125em;
+}
+
+/* Layout Styles */
+.component-bg {
+    background: url("images/pattern-background-desktop.svg") var(--pale-blue) ;
+    background-size: contain;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 1em;
+}
+
+.component-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 1.25em;
+    text-align: center;
+    min-width: 20em;
+    max-width: 23em;
+    box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 15.18%);
+}
+
+.component-img {
+    border-radius: 1.25em 1.25em 0 0;
+    margin-bottom: 2.2em;
+}
+
+.component-pricing {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background: var(--very-pale-blue);
+    
+    width: 67%;
+    border-radius: 0.687em;
+}
+
+.component-pricing-wrapper {
+    display: flex;
+}
+
+.component-pricing-text {
+    margin-left: 1.5em;
+}
+
+.component-button-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+Custom Styles 
+*/
+.component-btn {
+    padding: 1rem 1em;
+    align-items: center;
+    width: 55%;
+    font-weight: 900;
+    border-radius: 0.67em;
+    margin-bottom: 1.5em;
+    margin: -2.5em  1.4em 1.8em 4em ;
+    text-decoration: none;
+}
+
+.primary-btn {
+    margin-top: 0.34px;
+    background: var(--bright-blue);
+    color: #ffffff;
+    box-shadow: 0 20px 20px 0 rgba(56, 42, 225, 19.03%);
+}
+
+.info-btn {
+    margin-bottom: 0.03px;
+    margin-top: 0.25px;
+    color: var(--desaturated-blue);
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+    background: var(--active-color);
+}
+
+.info-btn:hover,
+.info-btn:focus {
+    color: var(--dark-blue);
+}
+
+.pricing-link:hover,
+.pricing-link:focus {
+    color: var(--active-color);
+    text-decoration: none;
+}
+
+.component-card:hover, 
+.component-card:focus {
+    box-shadow: 0 40px 40px -20px rgb(13 48 189 / 40%);
+    transition: all 0.5s ease-in;
+}
+
+.attribution{
+    text-align: center;
+    font-size: 11px;
+    font-family: var(--base-font);
+}
+
+/*Media Queries */
+
+@media (min-width: 30em) 
+{
+    .component-bg {
+        background: var(--pale-blue) url(images/pattern-background-desktop.svg) no-repeat;
+        background-size: contain;
+    }
+    .container 
+    {
+        height: inherit;
+        margin: 0 1em;
+        padding: 1em 0;
+    }
+
+    .component-pricing {
+        margin: 0 3em 2em 3em;
+        padding: 1.5em;
+    }
+
+    .component-pricing-text {
+        margin-left: 1.125em;
+        margin-top: -0.1875em;
+    }
+
+    .component-text {
+        padding: 0 2em;
+    }
+
+    .component-button-wrapper {
+        padding: 0 1px;
+    }
+
+    .component-title {
+        font-size: 1.7em;
+    }
+
+    .pricing-title,
+    .price {
+        font-size: 1em;
+        padding-bottom: 0.875em;
+        margin-top: 0.25em;
+        line-height: 1;
+    }
+
+    .pricing-link {
+        font-size: 0.8em;
+    }
+}
+
+@media (min-height: 50em) {
+    .container {
+        height: 100vh;
+        padding: unset;
+    }
+}
